@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
-from .OneHot import one_hot_encode, reverse_one_hot_encode, colourize
+from .OneHot import encode_array, decode_array
 
-__all__ = ["one_hot_encode", "reverse_one_hot_encode", "colourize"]
+__all__ = ["encode_array", "decode_array"]
