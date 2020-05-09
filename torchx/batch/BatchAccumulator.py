@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import torch
 
+
 class BatchAccumulator:
     """Tool to help accumulate gradients before optimizer steps.
 

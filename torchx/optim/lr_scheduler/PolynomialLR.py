@@ -58,7 +58,7 @@ class PolynomialLR(torch.optim.lr_scheduler._LRScheduler):
             + self.final_learning_rate  # noqa: W503
             for base_lr in self.base_lrs
         ]
-        
+
     @property
     def learning_rate(self):
         return self._last_lr[0]

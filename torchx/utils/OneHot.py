@@ -1,7 +1,7 @@
+# -*- coding: utf-8 -*-
 from typing import Dict
 
 import numpy
-import torch
 
 
 def encode_array(array: numpy.ndarray, encode_dict: Dict[int, numpy.ndarray]):
@@ -24,7 +24,7 @@ def encode_array(array: numpy.ndarray, encode_dict: Dict[int, numpy.ndarray]):
     encoded = numpy.zeros(array.shape[:-1])
     for index, value in encode_dict.items():
         encoded[numpy.where(numpy.all(array == value, axis=-1))] = index
-        
+
     return encoded
 
 
@@ -49,5 +49,5 @@ def decode_array(array: numpy.ndarray, decode_dict: Dict[int, numpy.ndarray]):
     colourized = numpy.zeros(list(array.shape) + [axis_size], numpy.uint32)
     for index, value in decode_dict.items():
         colourized[array == index] = value
-        
+
     return colourized

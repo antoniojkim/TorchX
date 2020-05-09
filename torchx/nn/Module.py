@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 
 import torch
+
 
 class Module(torch.nn.Module):
     """Convenient intermediary class that implements useful module functions"""
@@ -17,8 +19,7 @@ class Module(torch.nn.Module):
     def reset_parameters(self):
         for p in self.parameters():
             init_func = self.init_funcs.get(
-                len(p.shape), 
-                lambda x: torch.nn.init.constant(x, 1.0)
+                len(p.shape), lambda x: torch.nn.init.constant(x, 1.0)
             )
             init_func(p)
 

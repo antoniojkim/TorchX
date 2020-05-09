@@ -21,8 +21,5 @@ setuptools.setup(
     ],
     python_requires=">=3.6",
     include_package_data=True,
-    install_requires=[
-        'pyyaml',
-        'torch>=1.4',
-    ]
+    install_requires=["numpy", "pyyaml", "torch>=1.4"],
 )
