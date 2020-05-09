@@ -8,6 +8,13 @@ class BatchAccumulator:
         optimizer: Wrapped optimizer.
         interval: The number of times the gradient should be accumulated before the
             optimizer takes a step.
+
+    Example:
+        >>> with BatchAccumulator(optimizer, 4) as accumulator:
+        >>>     for data, label in dataloader:
+        >>>         forward(...)
+        >>>         backward(...)
+        >>>         accumulator.step()
     """
 
     def __init__(self, optimizer: torch.optim.Optimizer, interval: int):
@@ -21,15 +28,16 @@ class BatchAccumulator:
 
     def __exit__(self, exc_type, exc_val, traceback):
         if self.count > 0:
-            self.step()
+            self.optimizer.step()
+            self.optimizer.zero_grad()
 
     def __next__(self):
+        self.step()
+
+    def step(self):
         self.count += 1
 
         if self.count >= self.interval:
             self.count = 0
-            self.step()
-
-    def step(self):
-        self.optimizer.step()
-        self.optimizer.zero_grad()
+            self.optimizer.step()
+            self.optimizer.zero_grad()
