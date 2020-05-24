@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 import logging
-from typing import Dict
 
 import torch
 

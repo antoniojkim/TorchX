@@ -32,10 +32,11 @@ A number of convenient Learning Rate Schedulers
 ### params
 
 Contains a convenient class that reads parameters from a yaml file so that all parameters don't need to be passed in through the command line.
-* [`Parameters`](https://github.com/antoniojkim/TorchX/blob/master/torchx/params/Parameters.py#L16)
+* [`Parameters`](https://github.com/antoniojkim/TorchX/blob/master/torchx/params/Parameters.py#L15)
 
 ### utils
 
 Contains a number of useful utility functions
 * [`encode_array`](https://github.com/antoniojkim/TorchX/blob/master/torchx/utils/OneHot.py#L7): Efficient way to encode an image into classes
 * [`decode_array`](https://github.com/antoniojkim/TorchX/blob/master/torchx/utils/OneHot.py#L31): Efficient way to decode an array of labels to an image
+* [`hex_to_rgb`](https://github.com/antoniojkim/TorchX/blob/master/torchx/utils/Colour.py#L7): Converts hex string into an rgb array

@@ -28,3 +28,7 @@ class Module(torch.nn.Module):
 
     def save(self, save_path):
         torch.save(self.state_dict(), save_path)
+
+    def save_jit(self, trace_image, save_path):
+        traced_script_module = torch.jit.trace(self, trace_image)
+        traced_script_module.save(save_path)
