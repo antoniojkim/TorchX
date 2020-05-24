@@ -63,6 +63,12 @@ class PolynomialLR(torch.optim.lr_scheduler._LRScheduler):
     def learning_rate(self):
         return self._last_lr[0]
 
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, traceback):
+        pass
+
     def __iter__(self):
         return self
 
