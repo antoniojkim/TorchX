@@ -1,3 +1,4 @@
 *.log
 *pycache*
 *ipynb_checkpoint*
+.vscode/

@@ -14,13 +14,18 @@ pip install -U git+https://github.com/antoniojkim/TorchX.git
 
 ### nn
 
-### Conv
+#### [Module](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Module.py#L5)
+
+A class that derives from `torch.nn.Module`. Features a number of convenient methods for saving and loading the model as well as a way to initializing weights.
+
+#### Conv
 
 A number of convenient Conv2D modules.
-* [`Conv2dBatch`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L6): a 2d convolution followed by a [batch normalization](https://arxiv.org/pdf/1502.03167.pdf) and a ReLU activation
-* [`Conv2dGroup`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L28): a 2d convolution followed by a [group normalization](https://arxiv.org/pdf/1803.08494.pdf) and a ReLU activation
-* [`DSConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L53)
-* [`DWConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L66)
+* [`Conv2dBatch`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L5): a 2d convolution followed by a [batch normalization](https://arxiv.org/pdf/1502.03167.pdf) and a ReLU activation
+* [`ConvTranspose2dBatch`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L28): a 2d convolution transpose followed by a [batch normalization](https://arxiv.org/pdf/1502.03167.pdf) and a ReLU activation
+* [`Conv2dGroup`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L51): a 2d convolution followed by a [group normalization](https://arxiv.org/pdf/1803.08494.pdf) and a ReLU activation
+* [`DSConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L75)
+* [`DWConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L88)
 
 ### optim
 
