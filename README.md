@@ -22,10 +22,15 @@ A class that derives from `torch.nn.Module`. Features a number of convenient met
 
 A number of convenient Conv2D modules.
 * [`Conv2dBatch`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L5): a 2d convolution followed by a [batch normalization](https://arxiv.org/pdf/1502.03167.pdf) and a ReLU activation
-* [`ConvTranspose2dBatch`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L28): a 2d convolution transpose followed by a [batch normalization](https://arxiv.org/pdf/1502.03167.pdf) and a ReLU activation
-* [`Conv2dGroup`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L51): a 2d convolution followed by a [group normalization](https://arxiv.org/pdf/1803.08494.pdf) and a ReLU activation
-* [`DSConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L75)
-* [`DWConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L88)
+* [`ConvTranspose2dBatch`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L31): a 2d convolution transpose followed by a [batch normalization](https://arxiv.org/pdf/1502.03167.pdf) and a ReLU activation
+* [`Conv2dGroup`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L57): a 2d convolution followed by a [group normalization](https://arxiv.org/pdf/1803.08494.pdf) and a ReLU activation
+* [`DSConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L81)
+* [`DWConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L94)
+
+#### Norm
+
+A number of additional norm modules.
+* [`PixelwiseNorm`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Norm.py#L5): a pixelwise feature vector normalization as described in [this paper](https://arxiv.org/pdf/1710.10196.pdf)
 
 ### optim
 

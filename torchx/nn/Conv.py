@@ -9,6 +9,7 @@ def Conv2dBatch(
     stride: int = 1,
     padding: int = 0,
     bias: bool = True,
+    leaky: float = None,
     **kwargs
 ):
     return torch.nn.Sequential(
@@ -21,7 +22,9 @@ def Conv2dBatch(
             bias=bias,
         ),
         torch.nn.BatchNorm2d(out_channels),
-        torch.nn.ReLU(inplace=True),
+        torch.nn.ReLU(inplace=True)
+        if leaky is None
+        else torch.nn.LeakyReLU(leaky, inplace=True),
     )
 
 
@@ -32,6 +35,7 @@ def ConvTranspose2dBatch(
     stride: int = 2,
     padding: int = 0,
     bias: bool = False,
+    leaky: float = None,
     **kwargs
 ):
     return torch.nn.Sequential(
@@ -44,7 +48,9 @@ def ConvTranspose2dBatch(
             bias=bias,
         ),
         torch.nn.BatchNorm2d(out_channels),
-        torch.nn.ReLU(inplace=True),
+        torch.nn.ReLU(inplace=True)
+        if leaky is None
+        else torch.nn.LeakyReLU(leaky, inplace=True),
     )
 
 
