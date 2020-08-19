@@ -6,7 +6,7 @@ with open("README.md", "r") as file:
 
 setuptools.setup(
     name="torchx",
-    version="0.0.6",
+    version="0.0.8",
     author="AntonioJKim",
     author_email="contact@antoniojkim.com",
     description="An 'eXtension' to the PyTorch Deep Learning Framework",
