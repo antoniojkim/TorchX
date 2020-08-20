@@ -21,17 +21,19 @@ A class that derives from `torch.nn.Module`. Features a number of convenient met
 #### Conv
 
 A number of convenient Conv2D modules.
-* [`Conv2dBatch`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L6): a 2d convolution followed by a [batch normalization](https://arxiv.org/pdf/1502.03167.pdf) and a ReLU activation
-* [`ConvTranspose2dBatch`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L32): a 2d convolution transpose followed by a [batch normalization](https://arxiv.org/pdf/1502.03167.pdf) and a ReLU activation
-* [`Conv2dGroup`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L58): a 2d convolution followed by a [group normalization](https://arxiv.org/pdf/1803.08494.pdf) and a ReLU activation
-* [`DSConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L82)
-* [`DWConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L95)
-* [`EqualizedConv2d`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L105): a 2d convolution with equalized weights as described in the [Pro-GAN paper](https://arxiv.org/pdf/1710.10196.pdf)
-* [`EqualizedConvTranspose2d`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L142): a 2d convolution tranpose with equalized weights as described in the [Pro-GAN paper](https://arxiv.org/pdf/1710.10196.pdf)
+* [`Conv2d`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L6-L88): A simpler, modified version of the normal `torch.nn.Conv2d` which supports an
+    equalized learning rate by scaling the weights dynamically in each forward pass.
+* [`ConvTranspose2d`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L91-L173): A simpler, modified version of the normal `torch.nn.ConvTranspose2d` which supports an
+    equalized learning rate by scaling the weights dynamically in each forward pass.
+* [`Conv2dBatch`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L176-L199): a 2d convolution followed by a [batch normalization](https://arxiv.org/pdf/1502.03167.pdf) and a ReLU activation
+* [`ConvTranspose2dBatch`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L202-L225): a 2d convolution transpose followed by a [batch normalization](https://arxiv.org/pdf/1502.03167.pdf) and a ReLU activation
+* [`Conv2dGroup`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L228-L249): a 2d convolution followed by a [group normalization](https://arxiv.org/pdf/1803.08494.pdf) and a ReLU activation
+* [`DSConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L252-L262)
+* [`DWConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L265-L272)
 
 #### Linear
 
-* [`EqualizedLinear`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Linear.py#L6): a linear (dense) layer with equalized weights as described in the [Pro-GAN paper](https://arxiv.org/pdf/1710.10196.pdf)
+* [`Linear`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Linear.py#L6-L66): a linear (dense) layer which supports an equalized learning rate by scaling the weights dynamically in each forward pass.
 
 #### Norm
 

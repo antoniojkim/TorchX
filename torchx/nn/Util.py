@@ -17,7 +17,7 @@ class View(torch.nn.Module):
         return x.view(*self.shape)
 
     def __repr__(self):
-        return f"View({', '.join(self.shape)})"
+        return f"View({', '.join(map(str, self.shape))})"
 
 
 class MinibatchStddev(torch.nn.Module):
