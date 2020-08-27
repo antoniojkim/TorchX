@@ -2,7 +2,7 @@
 
 An "eXtension" to the PyTorch Deep Learning Framework. It contains "eXtra" features and functionality that I wish were in the official PyTorch framework.
 
-## Install
+## Installation
 
 TorchX is set up as a pip installable Python package:
 
@@ -10,7 +10,13 @@ TorchX is set up as a pip installable Python package:
 pip install -U git+https://github.com/antoniojkim/TorchX.git
 ```
 
-## Features
+## Documentation
+
+* torchx
+  * [nn](#nn)
+  * [optim](#optim)
+  * [params](#params)
+  * [utils](#utils)
 
 ### nn
 
@@ -30,6 +36,8 @@ A number of convenient Conv2D modules.
 * [`Conv2dGroup`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L228-L249): a 2d convolution followed by a [group normalization](https://arxiv.org/pdf/1803.08494.pdf) and a ReLU activation
 * [`DSConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L252-L262)
 * [`DWConv`](https://github.com/antoniojkim/TorchX/blob/master/torchx/nn/Conv.py#L265-L272)
+
+[documentation](#documentation) | [nn](#nn)
 
 #### Linear
 
