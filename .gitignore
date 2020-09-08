@@ -1,5 +1,7 @@
 *.log
+*._*
 *pycache*
 *ipynb_checkpoint*
 .vscode/
 docs/build
+*DS_Store*

@@ -35,8 +35,9 @@ class MinibatchStddev(torch.nn.Module):
 
 class PrintShape(torch.nn.Module):
     """
-    Print shape of tensor and then forward it to next module
-    For debugging purposes
+    Print shape of tensor and then forward it to next module.
+
+    For debugging purposes.
     """
 
     def __init__(self, format="{}"):
