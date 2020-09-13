@@ -4,4 +4,5 @@
 *ipynb_checkpoint*
 .vscode/
 docs/build
+docs/source/torchxapi/
 *DS_Store*

@@ -1,113 +1,64 @@
-torchx
-======
-
-.. currentmodule:: lightgbm
+TorchX API
+==========
 
 nn
---
+---
 
 An extension to the standard `torch.nn <https://pytorch.org/docs/stable/nn.html>`_ neural network library which contains a number of useful classes and functions for building neural networks
 
+.. currentmodule:: torchx.nn
 
-Conv
-^^^^
+.. autosummary::
+   :toctree: torchxapi
+   :template: custom-module-template.rst
+   :recursive:
 
-.. automodule:: torchx.nn.Conv
-    :members:
-
-
-Interpolate
-^^^^^^^^^^^
-
-.. automodule:: torchx.nn.Interpolate
-    :members:
-
-
-Linear
-^^^^^^
-
-.. automodule:: torchx.nn.Linear
-    :members:
-
-
-Loss
-^^^^
-
-.. automodule:: torchx.nn.Loss
-    :members:
-
-
-Module
-^^^^^^
-
-.. automodule:: torchx.nn.Module
-    :members:
-
-
-Norm
-^^^^
-
-.. automodule:: torchx.nn.Norm
-    :members:
-
-
-Util
-^^^^
-
-.. automodule:: torchx.nn.Util
-    :members:
+    Conv
+    Interpolate
+    Linear
+    Loss
+    Module
+    Norm
+    Util
 
 
 optim
 -----
 
-lr_scheduler
-^^^^^^^^^^^^
+.. currentmodule:: torchx.optim
 
-.. automodule:: torchx.optim.lr_scheduler
-    :members:
+.. autosummary::
+   :toctree: torchxapi
+   :template: custom-module-template.rst
+   :recursive:
+
+    lr_scheduler
 
 
 params
------
+------
 
-.. automodule:: torchx.params
-    :members:
+.. currentmodule:: torchx
+
+.. autosummary:: params
+   :toctree: torchxapi
+   :template: custom-module-template.rst
+   :recursive:
 
 
 utils
 -----
 
-Batch
-^^^^^
 
-.. automodule:: torchx.utils.Batch
-    :members:
+.. currentmodule:: torchx.utils
 
+.. autosummary::
+   :toctree: torchxapi
+   :template: custom-module-template.rst
+   :recursive:
 
-Colour
-^^^^^^
-
-.. automodule:: torchx.utils.Colour
-    :members:
-
-
-Interpolate
-^^^^^^^^^^^
-
-.. automodule:: torchx.utils.Interpolate
-    :members:
-
-
-Norm
-^^^^
-
-.. automodule:: torchx.utils.Norm
-    :members:
-
-
-OneHot
-^^^^^^
-
-.. automodule:: torchx.utils.OneHot
-    :members:
+    Batch
+    Colour
+    Interpolate
+    Norm
+    OneHot

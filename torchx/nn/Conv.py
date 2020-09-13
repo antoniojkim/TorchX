@@ -14,7 +14,7 @@ class Conv2d(torch.nn.Module):
     The weight parameter is initialized using the standard normal if use_wscale is True.
     The bias parameter is initialized to zero.
 
-    Args:
+    Parameters:
         in_channels (int): Number of channels in the input image
         out_channels (int): Number of channels produced by the convolution
         kernel_size (int or tuple): Size of the convolving kernel. Default: 3
@@ -36,7 +36,7 @@ class Conv2d(torch.nn.Module):
 
     Note:
 
-        See `torch.nn.Conv2d<https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html#torch.nn.Conv2d>`
+        See `torch.nn.Conv2d <https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html#torch.nn.Conv2d>`_
         for more details on the 2d convolution operator.
     """  # noqa: E501
 
@@ -110,8 +110,7 @@ class Conv2d(torch.nn.Module):
 
 
 class ConvTranspose2d(torch.nn.Module):
-    """
-    Applies a 2D convolution transose over an input signal composed of several input planes.
+    r"""Applies a 2D convolution transose over an input signal composed of several input planes.
 
     A simpler, modified version of the standard `torch.nn.ConvTranspose2d`, which supports an
     equalized learning rate by scaling the weights dynamically in each forward pass.
@@ -121,17 +120,29 @@ class ConvTranspose2d(torch.nn.Module):
     The weight parameter is initialized using the standard normal if use_wscale is True.
     The bias parameter is initialized to zero.
 
-    Parameters
-    ----------
-    in_channels: Number of channels in the input image
-    out_channels: Number of channels produced by the convolution
-    kernel_size: Size of the convolving kernel
-    stride: Stride of the convolution
-    padding: Zero-padding added to both sides of the input
-    bias: If True, adds a learnable bias to the output
-    gain: The gain for the scaled weight
-    use_wscale: If True, scales the weights in each forward pass
-    fan_in: Size of the weight parameter to scale by
+    Parameters:
+        in_channels: Number of channels in the input image
+        out_channels: Number of channels produced by the convolution
+        kernel_size: Size of the convolving kernel
+        stride: Stride of the convolution
+        padding: Zero-padding added to both sides of the input
+        bias: If True, adds a learnable bias to the output
+        gain: The gain for the scaled weight
+        use_wscale: If True, scales the weights in each forward pass
+        fan_in: Size of the weight parameter to scale by
+
+    Note:
+
+        If :attr:`fan_in` is not provided, it is computed as :math:`\text{fan_in} = \text{in_channels} \times \text{kernel_size} ^ 2`
+
+    Note:
+
+        The :attr:`wscale` is computed as :math:`\text{wscale} = \frac{\text{gain}}{\sqrt{\text{fan_in}}}`
+
+    Note:
+
+        See `torch.nn.ConvTranspose2d <https://pytorch.org/docs/stable/generated/torch.nn.ConvTranspose2d.html#torch.nn.ConvTranspose2d>`_
+        for more details on the 2d convolution operator.
     """  # noqa: E501
 
     def __init__(

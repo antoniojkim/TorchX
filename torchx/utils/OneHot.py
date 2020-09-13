@@ -7,17 +7,20 @@ import numpy
 def encode_array(array: numpy.ndarray, encode_list: Tuple[int, numpy.ndarray]):
     """Encodes the provided array using the provided encoding list.
 
-    Note: this function is vectorized and is thus very fast.
-
-    Args:
+    Parameters:
         array: The array to encode
         encode_list: A tuple of encoding value, index pairs. Each index must be
             an integer and each encoding value must be a numpy array of the same size
             as the last axis in the array that is to be encoded.
 
     Raises:
+
         AssertionError if the size of the last axis of the array does not match
             the sizes of the encoding values
+
+    Note:
+
+        This function is vectorized and is thus very fast.
     """
     assert all(array.shape[-1] == value.shape[0] for value, index in encode_list)
 
