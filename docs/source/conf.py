@@ -40,6 +40,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.autosummary",
     "sphinx_rtd_theme",
+    "autodocsumm",
 ]
 autosummary_generate = True
 

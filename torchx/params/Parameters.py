@@ -13,8 +13,9 @@ except ImportError:
 
 
 class Parameters:
-    """
-    Args:
+    """Handles reading and encapsulation of paramters in a yaml file.
+
+    Parameters:
         num_epochs: Number of epochs to train for
         epoch_start: Start counting epochs from this number
         batch_size: Number of images in each batch
