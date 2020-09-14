@@ -6,10 +6,15 @@ from .Norm import pixel_norm
 from .OneHot import encode_array, decode_array
 
 __all__ = [
+    # Batch
+    "minibatch_stddev_layer",
+    # Colour
+    "hex_to_rgb",
+    # Interpolate
+    "lerp",
+    # Norm
+    "pixel_norm",
+    # OneHot
     "encode_array",
     "decode_array",
-    "lerp",
-    "minibatch_stddev_layer",
-    "pixel_norm",
-    "hex_to_rgb",
 ]

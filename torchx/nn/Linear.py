@@ -4,8 +4,7 @@ from numpy import sqrt
 
 
 class Linear(torch.nn.Module):
-    """
-    Applies a linear transformation to the incoming data
+    """Applies a linear transformation to the incoming data.
 
     A simpler, modified version of the normal torch.nn.Conv2d which supports an
     equalized learning rate by scaling the weights dynamically in each forward pass.
@@ -15,11 +14,10 @@ class Linear(torch.nn.Module):
     The weight parameter is initialized using the standard normal if use_wscale is True.
     The bias parameter is initialized to zero.
 
-    Parameters
-    ----------
-    in_features: size of each input sample
-    out_features: size of each output sample
-    bias: If set to True, the layer will add a learnable additive bias.
+    Parameters:
+        in_features: size of each input sample
+        out_features: size of each output sample
+        bias: If set to True, the layer will add a learnable additive bias.
     """  # noqa: E501
 
     def __init__(

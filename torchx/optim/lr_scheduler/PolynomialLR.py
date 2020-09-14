@@ -6,7 +6,7 @@ import torch
 class PolynomialLR(torch.optim.lr_scheduler._LRScheduler):
     """Polynomial learning rate decay scheduler.
 
-    Args:
+    Parameters:
         optimizer: Wrapped optimizer.
         power: The polynomial factor at which the learning rate will decay
         starting_step: The step that the scheduler will start at.

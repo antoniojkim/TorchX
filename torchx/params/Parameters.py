@@ -13,7 +13,7 @@ except ImportError:
 
 
 class Parameters:
-    """Handles reading and encapsulation of paramters in a yaml file.
+    """Handles reading and encapsulation of parameters in a yaml file.
 
     Parameters:
         num_epochs: Number of epochs to train for

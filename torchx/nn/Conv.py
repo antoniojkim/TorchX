@@ -110,7 +110,7 @@ class Conv2d(torch.nn.Module):
 
 
 class ConvTranspose2d(torch.nn.Module):
-    r"""Applies a 2D convolution transose over an input signal composed of several input planes.
+    r"""Applies a 2D convolution transpose over an input signal composed of several input planes.
 
     A simpler, modified version of the standard `torch.nn.ConvTranspose2d`, which supports an
     equalized learning rate by scaling the weights dynamically in each forward pass.
@@ -215,6 +215,7 @@ def Conv2dBatch(
     leaky: float = None,
     **kwargs,
 ):
+    """A 2D convolution followed by a batch normalization and ReLU activation."""
     return torch.nn.Sequential(
         torch.nn.Conv2d(
             in_channels=in_channels,
@@ -241,6 +242,9 @@ def ConvTranspose2dBatch(
     leaky: float = None,
     **kwargs,
 ):
+    """A 2D convolution transpose followed by a batch normalization
+    and ReLU activation.
+    """
     return torch.nn.Sequential(
         torch.nn.ConvTranspose2d(
             in_channels=in_channels,
@@ -267,6 +271,7 @@ def Conv2dGroup(
     num_groups=1,
     **kwargs,
 ):
+    """A 2D convolution followed by a group norm and ReLU activation."""
     return torch.nn.Sequential(
         torch.nn.Conv2d(
             in_channels=in_channels,
@@ -282,6 +287,9 @@ def Conv2dGroup(
 
 
 def DSConv(in_channels: int, out_channels: int, stride: int = 1, **kwargs):
+    """Depth-wise separable convolution followed by a 2D convolution
+    each followed by a batch normalization and ReLU activation.
+    """
     return torch.nn.Sequential(
         torch.nn.Conv2d(
             in_channels, in_channels, 3, stride, 1, groups=in_channels, bias=False
@@ -295,6 +303,9 @@ def DSConv(in_channels: int, out_channels: int, stride: int = 1, **kwargs):
 
 
 def DWConv(in_channels: int, out_channels: int, stride: int = 1, **kwargs):
+    """Depth-wise separable convolution followed by a batch normalization
+    and ReLU activation.
+    """
     return torch.nn.Sequential(
         torch.nn.Conv2d(
             in_channels, in_channels, 3, stride, 1, groups=in_channels, bias=False

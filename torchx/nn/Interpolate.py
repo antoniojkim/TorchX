@@ -5,9 +5,7 @@ from ..utils import lerp
 
 
 class Lerp(torch.nn.Module):
-    """
-    Linear Interpolation in a module
-    """
+    """A module that encapsulates the Linear Interpolation function"""
 
     def __init__(self, a, b, t):
         super().__init__()

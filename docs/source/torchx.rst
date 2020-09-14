@@ -1,4 +1,4 @@
-TorchX API
+torchx
 ==========
 
 nn
@@ -6,66 +6,73 @@ nn
 
 An extension to the standard `torch.nn <https://pytorch.org/docs/stable/nn.html>`_ neural network library which contains a number of useful classes and functions for building neural networks
 
-
-Conv
-^^^^
-
-.. automodule:: torchx.nn.Conv
+.. automodule:: torchx.nn
    :autosummary:
    :members:
 
-Interpolate
-^^^^^^^^^^^
+.. Conv
+.. ^^^^
 
-.. automodule:: torchx.nn.Interpolate
-   :autosummary:
-   :members:
+.. .. automodule:: torchx.nn.Conv
+..    :autosummary:
+..    :members:
 
-Linear
-^^^^^^
+.. Interpolate
+.. ^^^^^^^^^^^
 
-.. automodule:: torchx.nn.Linear
-   :autosummary:
-   :members:
+.. .. automodule:: torchx.nn.Interpolate
+..    :autosummary:
+..    :members:
 
-Loss
-^^^^
+.. Linear
+.. ^^^^^^
 
-.. automodule:: torchx.nn.Loss
-   :autosummary:
-   :members:
+.. .. automodule:: torchx.nn.Linear
+..    :autosummary:
+..    :members:
 
-Module
-^^^^^^
+.. Loss
+.. ^^^^
 
-.. automodule:: torchx.nn.Module
-   :autosummary:
-   :members:
+.. .. automodule:: torchx.nn.Loss
+..    :autosummary:
+..    :members:
 
-Norm
-^^^^
+.. Module
+.. ^^^^^^
 
-.. automodule:: torchx.nn.Norm
-   :autosummary:
-   :members:
+.. .. automodule:: torchx.nn.Module
+..    :autosummary:
+..    :members:
 
-Util
-^^^^
+.. Norm
+.. ^^^^
 
-.. automodule:: torchx.nn.Util
-   :autosummary:
-   :members:
+.. .. automodule:: torchx.nn.Norm
+..    :autosummary:
+..    :members:
+
+.. Util
+.. ^^^^
+
+.. .. automodule:: torchx.nn.Util
+..    :autosummary:
+..    :members:
 
 
 optim
 -----
 
-lr_scheduler
-^^^^^^^^^^^^
-
-.. automodule:: torchx.optim.lr_scheduler
+.. automodule:: torchx.optim
     :autosummary:
     :members:
+
+.. lr_scheduler
+.. ^^^^^^^^^^^^
+
+.. .. automodule:: torchx.optim.lr_scheduler
+..     :autosummary:
+..     :members:
 
 
 params
@@ -79,41 +86,45 @@ params
 utils
 -----
 
-Batch
-^^^^^
-
-.. automodule:: torchx.utils.Batch
+.. automodule:: torchx.utils
     :autosummary:
     :members:
 
+.. Batch
+.. ^^^^^
 
-Colour
-^^^^^^
-
-.. automodule:: torchx.utils.Colour
-    :autosummary:
-    :members:
-
-
-Interpolate
-^^^^^^^^^^^
-
-.. automodule:: torchx.utils.Interpolate
-    :autosummary:
-    :members:
+.. .. automodule:: torchx.utils.Batch
+..     :autosummary:
+..     :members:
 
 
-Norm
-^^^^
+.. Colour
+.. ^^^^^^
 
-.. automodule:: torchx.utils.Norm
-    :autosummary:
-    :members:
+.. .. automodule:: torchx.utils.Colour
+..     :autosummary:
+..     :members:
 
 
-OneHot
-^^^^^^
+.. Interpolate
+.. ^^^^^^^^^^^
 
-.. automodule:: torchx.utils.OneHot
-    :autosummary:
-    :members:
+.. .. automodule:: torchx.utils.Interpolate
+..     :autosummary:
+..     :members:
+
+
+.. Norm
+.. ^^^^
+
+.. .. automodule:: torchx.utils.Norm
+..     :autosummary:
+..     :members:
+
+
+.. OneHot
+.. ^^^^^^
+
+.. .. automodule:: torchx.utils.OneHot
+..     :autosummary:
+..     :members:

@@ -16,7 +16,7 @@ from .Norm import PixelwiseNorm
 from .Util import Cond, MinibatchStddev, PrintShape, View
 
 __all__ = [
-    "Module",
+    # Conv
     "Conv2d",
     "ConvTranspose2d",
     "Conv2dBatch",
@@ -24,13 +24,19 @@ __all__ = [
     "Conv2dGroup",
     "DSConv",
     "DWConv",
-    "Linear",
+    # Interpolate
     "Lerp",
+    # Linear
+    "Linear",
+    # Loss
+    "WGAN_ACGAN",
+    "WGANGP_ACGAN",
+    # Module
+    "Module",
+    # Utils
     "Cond",
     "MinibatchStddev",
     "PixelwiseNorm",
     "PrintShape",
     "View",
-    "WGAN_ACGAN",
-    "WGANGP_ACGAN",
 ]

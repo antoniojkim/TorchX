@@ -4,26 +4,24 @@ import torch
 from ..utils import minibatch_stddev_layer
 
 
-class View(torch.nn.Module):
-    """
-    Set the view of a Tensor in a module
-    """
+class Cond(torch.nn.Module):
+    """Similar to tf.cond"""
 
-    def __init__(self, *shape):
+    def __init__(self, cond, a, b):
         super().__init__()
-        self.shape = shape
+        self.cond = cond
+        self.a = a
+        self.b = b
 
     def forward(self, x: torch.Tensor):
-        return x.view(*self.shape)
-
-    def __repr__(self):
-        return f"View({', '.join(map(str, self.shape))})"
+        if self.cond():
+            return self.a(x)
+        else:
+            return self.b(x)
 
 
 class MinibatchStddev(torch.nn.Module):
-    """
-    Increase the variation using minibatch standard deviation in a module
-    """
+    """Increase the variation using minibatch standard deviation in a module"""
 
     def __init__(self, group_size: int = 4):
         super().__init__()
@@ -34,8 +32,7 @@ class MinibatchStddev(torch.nn.Module):
 
 
 class PrintShape(torch.nn.Module):
-    """
-    Print shape of tensor and then forward it to next module.
+    """Print shape of tensor and then forward it to next module.
 
     For debugging purposes.
     """
@@ -49,19 +46,15 @@ class PrintShape(torch.nn.Module):
         return x
 
 
-class Cond(torch.nn.Module):
-    """
-    Similar to tf.cond
-    """
+class View(torch.nn.Module):
+    """Set the view of a Tensor in a module"""
 
-    def __init__(self, cond, a, b):
+    def __init__(self, *shape):
         super().__init__()
-        self.cond = cond
-        self.a = a
-        self.b = b
+        self.shape = shape
 
     def forward(self, x: torch.Tensor):
-        if self.cond():
-            return self.a(x)
-        else:
-            return self.b(x)
+        return x.view(*self.shape)
+
+    def __repr__(self):
+        return f"View({', '.join(map(str, self.shape))})"

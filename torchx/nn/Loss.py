@@ -5,13 +5,14 @@ from ..utils import lerp
 
 
 class WGAN_ACGAN(torch.nn.Module):
-    """
-    WGAN + AC-GAN
+    """WGAN + AC-GAN Loss Function
+
     Used as a loss function for training generators in GANs
 
-    References:
-        WGAN:   https://arxiv.org/pdf/1704.00028.pdf
-        AC-GAN: https://arxiv.org/pdf/1610.09585.pdf
+    Note:
+        References:
+        `WGAN <https://arxiv.org/pdf/1704.00028.pdf>`_,
+        `AC-GAN <https://arxiv.org/pdf/1610.09585.pdf>`_
     """
 
     def __init__(self, cond_weight: float = 1.0):
@@ -23,13 +24,14 @@ class WGAN_ACGAN(torch.nn.Module):
 
 
 class WGANGP_ACGAN(torch.nn.Module):
-    """
-    WGAN-GP + AC-GAN
+    """WGAN-GP + AC-GAN Loss Function
+
     Used as a loss function for training discriminators in GANs
 
-    References:
-        WGAN-GP: https://arxiv.org/pdf/1704.00028.pdf
-        AC-GAN:  https://arxiv.org/pdf/1610.09585.pdf
+    Note:
+        References:
+        `WGAN-GP <https://arxiv.org/pdf/1704.00028.pdf>`_,
+        `AC-GAN <https://arxiv.org/pdf/1610.09585.pdf>`_
     """
 
     def __init__(

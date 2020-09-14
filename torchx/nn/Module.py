@@ -3,7 +3,7 @@ import torch
 
 
 class Module(torch.nn.Module):
-    """Convenient intermediary class that implements useful module functions"""
+    """Convenient intermediary parent class that implements useful module functions"""
 
     init_funcs = {
         1: lambda x: torch.nn.init.normal_(x, mean=0.0, std=1.0),  # biases
